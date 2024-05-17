@@ -7,7 +7,7 @@ import {
 import React from "react";
 import chequeService from "../service/chequeService";
 import { useState } from "react";
-import ChequeForm from "./ChequeForm";
+import ChequeForm from "../components/ChequeForm";
 
 const AddCheque = () => {
   // Get current date

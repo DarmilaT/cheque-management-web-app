@@ -3,7 +3,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import ChequeList from "./components/ChequeList";
-import AddCheque from "./components/AddCheque";
+import AddCheque from "./Pages/AddCheque";
 import EditCheque from "./components/EditCheque";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/addCheque" element={<AddCheque />} />
         <Route path="/chequeList" element={<ChequeList />} />
-        <Route path="/editCheque/:id" element={<EditCheque/>}/>
+        <Route path="/editCheque/:id" element={<EditCheque />} />
       </Routes>
     </BrowserRouter>
   );
