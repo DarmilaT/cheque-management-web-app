@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import ChequeList from "./components/ChequeList";
+import NavBar from "./Pages/NavBar";
+import Home from "./Pages/Home";
+import ChequeList from "./Pages/ChequeList";
 import AddCheque from "./Pages/AddCheque";
-import EditCheque from "./components/EditCheque";
+import EditCheque from "./Pages/EditCheque";
 
 function App() {
   return (

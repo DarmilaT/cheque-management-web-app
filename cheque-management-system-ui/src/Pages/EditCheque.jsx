@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Card } from "@material-tailwind/react";
-import ChequeForm from "./ChequeForm";
+import ChequeForm from "../components/ChequeForm";
 import { useEffect, useState } from "react";
 import chequeService from "../service/chequeService";
 import { useNavigate, useParams } from "react-router-dom";
