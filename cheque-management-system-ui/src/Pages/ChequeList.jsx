@@ -14,8 +14,8 @@ import {
 } from "@heroicons/react/24/outline";
 import React from "react";
 import chequeService from "../service/chequeService";
-import Cheque from "./Cheque";
-import FilterSection from "./FilterSection";
+import Cheque from "../components/Cheque";
+import FilterSection from "../components/FilterSection";
 import CustomerService from "../service/CustomerService";
 import RouteService from "../service/RouteService";
 

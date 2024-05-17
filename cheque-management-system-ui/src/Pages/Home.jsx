@@ -1,6 +1,6 @@
 import React from "react";
-import PendingChequeCard from "./PendingChequeCard";
-import WeekCheques from "./WeekCheques";
+import PendingChequeCard from "../components/PendingChequeCard";
+import WeekCheques from "../components/WeekCheques";
 
 const Home = () => {
   return (
