@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Input, Button } from "@material-tailwind/react";
 import Select from "react-select";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import AddCustomerPopUp from "./AddCustomerPopUp";
 import RouteService from "../service/RouteService";
 import CustomerService from "../service/CustomerService";
@@ -84,7 +84,11 @@ function ChequeForm({
       <div className="mb-1 flex flex-col gap-6 px-2">
         <div className="flex flex-row gap-6">
           <div style={{ flexBasis: "calc(50% - 8px)" }}>
-            <Typography variant="h6" color="blue-gray" className="mb-2 mt-2">
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="mb-2 mt-2 text-white"
+            >
               Date
             </Typography>
             <Input
@@ -93,7 +97,7 @@ function ChequeForm({
               onChange={(e) => handleChange(e)}
               size="lg"
               placeholder="yyyy-mm-dd"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-white"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
@@ -104,7 +108,11 @@ function ChequeForm({
               onKeyDown={(e) => handleKeyDown(e, 0)}
             />
             {/* Add dropdown for selecting route */}
-            <Typography variant="h6" color="blue-gray" className="mb-2 mt-2">
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="mb-2 mt-2 text-white"
+            >
               Route
             </Typography>
             <Select
@@ -113,7 +121,7 @@ function ChequeForm({
               onChange={fetchCustomersByRoute}
               size="lg"
               placeholder="Select Route"
-              className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+              className="!bg-blue-gray-900 !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
@@ -123,7 +131,11 @@ function ChequeForm({
               }))}
             />
             {/* Add dropdown for selecting customer */}
-            <Typography variant="h6" color="blue-gray" className="mb-2 mt-2">
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="mb-2 mt-2 text-white"
+            >
               Customer Name
             </Typography>
             <Select
@@ -142,7 +154,12 @@ function ChequeForm({
                 label: customer.customerName,
               }))}
               noOptionsMessage={() => (
-                <Button onClick={handleAddCustomer}>Add New Customer</Button>
+                <Button
+                  onClick={handleAddCustomer}
+                  className="bg-blue-gray-900"
+                >
+                  Add New Customer
+                </Button>
               )}
             />
             <AddCustomerPopUp
@@ -152,7 +169,11 @@ function ChequeForm({
               fetchCustomersByRoute={fetchCustomersByRoute}
               routeName={routeName}
             />
-            <Typography variant="h6" color="blue-gray" className="mb-2 mt-2">
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="mb-2 mt-2 text-white"
+            >
               Bank
             </Typography>
             <Input
@@ -161,7 +182,7 @@ function ChequeForm({
               onChange={(e) => handleChange(e)}
               size="lg"
               placeholder="bank"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-white"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
@@ -173,7 +194,11 @@ function ChequeForm({
             />
           </div>
           <div style={{ flexBasis: "calc(50% - 8px)" }}>
-            <Typography variant="h6" color="blue-gray" className="mb-2 mt-2">
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="mb-2 mt-2 text-white"
+            >
               Branch
             </Typography>
             <Input
@@ -182,14 +207,18 @@ function ChequeForm({
               onChange={(e) => handleChange(e)}
               size="lg"
               placeholder="branch"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-white"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
               ref={(ref) => (inputRefs.current[2] = ref)}
               onKeyDown={(e) => handleKeyDown(e, 2)}
             />
-            <Typography variant="h6" color="blue-gray" className="mb-2 mt-2">
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="mb-2 mt-2 text-white"
+            >
               Cheque Number
             </Typography>
             <Input
@@ -198,14 +227,18 @@ function ChequeForm({
               onChange={(e) => handleChange(e)}
               size="lg"
               placeholder="cheque number"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-white"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
               ref={(ref) => (inputRefs.current[3] = ref)}
               onKeyDown={(e) => handleKeyDown(e, 3)}
             />
-            <Typography variant="h6" color="blue-gray" className="mb-2 mt-2">
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="mb-2 mt-2 text-white"
+            >
               Amount
             </Typography>
             <Input
@@ -214,14 +247,18 @@ function ChequeForm({
               onChange={(e) => handleChange(e)}
               size="lg"
               placeholder="amount"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-white"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
               ref={(ref) => (inputRefs.current[4] = ref)}
               onKeyDown={(e) => handleKeyDown(e, 4)}
             />
-            <Typography variant="h6" color="blue-gray" className="mb-2 mt-2">
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="mb-2 mt-2 text-white"
+            >
               Cheque Clearing Date
             </Typography>
             <Input
@@ -230,7 +267,7 @@ function ChequeForm({
               onChange={(e) => handleChange(e)}
               size="lg"
               placeholder="yyyy-mm-dd"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-white"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
@@ -239,7 +276,7 @@ function ChequeForm({
             />
           </div>
         </div>
-        <Typography variant="h6" color="blue-gray" className="-mb-3">
+        <Typography variant="h6" color="blue-gray" className="-mb-3 text-white">
           Status
         </Typography>
         <Select

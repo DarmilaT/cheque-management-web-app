@@ -8,17 +8,19 @@ import EditCheque from "./Pages/EditCheque";
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route index element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/addCheque" element={<AddCheque />} />
-        <Route path="/chequeList" element={<ChequeList />} />
-        <Route path="/editCheque/:id" element={<EditCheque />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="bg-blue-gray-900 min-h-screen">
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/addCheque" element={<AddCheque />} />
+          <Route path="/chequeList" element={<ChequeList />} />
+          <Route path="/editCheque/:id" element={<EditCheque />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -82,8 +82,16 @@ function WeekCheques() {
   const getRowId = (row) => row.cheque_id;
 
   return (
-    <div className="items-center ml-8 flex justify-center">
-      <Box sx={{ height: 275, width: "75%" }}>
+    <div className="items-center ml-8 flex justify-center mt-10 border-none shadow-none">
+      <Box
+        sx={{
+          height: 275,
+          width: "85%",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+          border: "none",
+        }}
+        className="bg-blue-gray-900 border-none"
+      >
         <DataGrid
           rows={cheques}
           columns={columns}
@@ -97,6 +105,24 @@ function WeekCheques() {
           }}
           pageSizeOptions={[3]}
           disableRowSelectionOnClick
+          sx={{
+            "& .MuiDataGrid-root": {
+              border: "none", // Remove border for DataGrid
+            },
+            "& .MuiDataGrid-cell": {
+              color: "white", // Set text color to white
+            },
+            "& .MuiDataGrid-columnHeader": {
+              color: "white", // White text for headers
+              fontWeight: "bold",
+            },
+            "& .MuiDataGrid-columnSeparator": {
+              visibility: "hidden", // Hide column separators
+            },
+            "& .MuiDataGrid-row:hover": {
+              backgroundColor: "#4b5563", // Dark hover effect on rows
+            },
+          }}
         />
       </Box>
     </div>

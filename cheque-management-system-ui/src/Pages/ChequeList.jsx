@@ -152,11 +152,15 @@ const ChequeList = () => {
   };
 
   return (
-    <Card className="h-full w-full">
-      <CardHeader floated={false} shadow={false} className="rounded-none">
+    <Card className="h-full w-full bg-blue-gray-900 text-white">
+      <CardHeader
+        floated={false}
+        shadow={false}
+        className="rounded-none bg-blue-gray-900 text-white"
+      >
         <div className="mb-4 flex flex-col justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <Typography variant="h2" color="blue-gray">
+            <Typography variant="h2" color="white">
               Cheque List
             </Typography>
           </div>
@@ -167,6 +171,7 @@ const ChequeList = () => {
               totalAmountOfPending={
                 chequeService.getTotalAmountOfPendingByClearingDateRange
               }
+              className="text-white bg-blue-gray-800"
             />
           </div>
           <div className="flex w-full shrink-0 gap-2 md:w-max">
@@ -174,41 +179,48 @@ const ChequeList = () => {
               <Input
                 onChange={(e) => searchCheque(e)}
                 label="Search"
-                icon={<MagnifyingGlassIcon className="h-5 w-5" />}
+                icon={<MagnifyingGlassIcon className="h-5 w-5 text-white" />}
+                className="bg-blue-gray-900 text-white placeholder:text-blue-gray-400"
               />
             </div>
-            <Button className="flex items-center gap-3" size="sm">
+            <Button
+              className="flex items-center gap-3 bg-blue-gray-700 hover:bg-blue-gray-600 text-white"
+              size="sm"
+            >
               <ArrowDownTrayIcon strokeWidth={2} className="h-4 w-4" />
               Download
             </Button>
           </div>
         </div>
-        <div className="items-center ">
+        <div className="items-center">
           <ButtonGroup fullWidth color="blue-gray">
             {tabs.map((tab) => (
-              <Button onClick={() => handleTabChange(tab)} key={tab}>
+              <Button
+                key={tab}
+                onClick={() => handleTabChange(tab)}
+                className="bg-blue-gray-900 text-white hover:bg-blue-gray-700"
+              >
                 {tab}
               </Button>
             ))}
           </ButtonGroup>
         </div>
       </CardHeader>
-      <CardBody className="overflow-scroll px-0">
+      <CardBody className="overflow-scroll px-0 bg-blue-gray-900 text-white">
         <table className="w-full min-w-max table-auto text-left">
           <thead>
             <tr>
               {table_head.map((heading) => (
                 <th
                   key={heading}
-                  className="border-y border-blue-gray-100 bg-blue-gray-50/50 p-4"
+                  className="border-y border-blue-gray-700 bg-blue-gray-900 p-4 text-white"
                 >
                   <Typography
                     variant="small"
-                    color="blue-gray"
+                    color="white"
                     className="font-normal leading-none opacity-70"
                   >
-                    {" "}
-                    {heading}{" "}
+                    {heading}
                   </Typography>
                 </th>
               ))}
@@ -220,7 +232,7 @@ const ChequeList = () => {
                 const isLast = index === cheque.length - 1;
                 const classes = isLast
                   ? "p-4"
-                  : "p-4 border-b border-blue-gray-50";
+                  : "p-4 border-b border-blue-gray-700";
                 return (
                   <Cheque
                     cheque={cheque}
@@ -235,7 +247,7 @@ const ChequeList = () => {
         </table>
       </CardBody>
       {showTotalAmt && (
-        <CardFooter className="flex items-center justify-between mt-4">
+        <CardFooter className="flex items-center justify-between mt-4 bg-blue-gray-800 text-white">
           <div className="flex">
             <Typography className="mr-2">Total Pending Amount:</Typography>
             <Typography>{totalAmt}</Typography>

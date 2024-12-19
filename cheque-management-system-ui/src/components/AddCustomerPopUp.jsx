@@ -56,7 +56,7 @@ function AddCustomerPopUp({ open, handleOpen, routes, fetchCustomersByRoute, rou
           <Typography variant="h4" color="blue-gray">
             Add New Customer
           </Typography>
-          <Typography className="-mb-2" variant="h6">
+          <Typography className="-mb-2 text-blue-gray-900" variant="h6">
             Customer Name
           </Typography>
           <Input
@@ -66,7 +66,7 @@ function AddCustomerPopUp({ open, handleOpen, routes, fetchCustomersByRoute, rou
             value={customer.customerName}
             onChange={(e) => handleInput(e)}
           />
-          <Typography className="-mb-2" variant="h6">
+          <Typography className="-mb-2 text-blue-gray-900" variant="h6">
             Address
           </Typography>
           <Input
@@ -76,7 +76,7 @@ function AddCustomerPopUp({ open, handleOpen, routes, fetchCustomersByRoute, rou
             value={customer.address}
             onChange={(e) => handleInput(e)}
           />
-          <Typography className="-mb-2" variant="h6">
+          <Typography className="-mb-2 text-blue-gray-900" variant="h6">
             Telephone Number
           </Typography>
           <MultipleValueTextInput
@@ -88,7 +88,7 @@ function AddCustomerPopUp({ open, handleOpen, routes, fetchCustomersByRoute, rou
             placeholder="Enter the phone Numbers"
             className=" placeholder-blue-gray-700 placeholder-font-normal rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-black-500 font-sans"
           />
-          <Typography className="-mb-2" variant="h6">
+          <Typography className="-mb-2 text-blue-gray-900" variant="h6">
             Route
           </Typography>
           <Select
@@ -108,7 +108,7 @@ function AddCustomerPopUp({ open, handleOpen, routes, fetchCustomersByRoute, rou
           />
         </CardBody>
         <CardFooter className="pt-0">
-          <Button variant="gradient" onClick={saveCustomer} fullWidth>
+          <Button variant="gradient" onClick={saveCustomer} fullWidth color="blue-gray">
             Submit
           </Button>
         </CardFooter>

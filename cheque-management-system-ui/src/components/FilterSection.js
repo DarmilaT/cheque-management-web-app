@@ -24,7 +24,7 @@ function FilterSection({
   };
 
   return (
-    <div className="flex gap-2 shrink-0">
+    <div className="flex gap-2 shrink-0 text-white">
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DatePicker
           label="Start Date"
@@ -32,6 +32,7 @@ function FilterSection({
           format="YYYY-MM-DD"
           size="small"
           onChange={(date) => setStartDate(date)}
+          color="text-white"
         />
         <DatePicker
           label="End Date"
@@ -44,7 +45,7 @@ function FilterSection({
 
       <Button
         onClick={handleFilter}
-        className="flex items-center gap-3"
+        className="flex items-center gap-3 bg-blue-gray-800 w-30 h-10"
         size="sm"
       >
         <FilterListIcon />

@@ -106,8 +106,8 @@ const AddCheque = () => {
   };
 
   return (
-    <Card color="transparent" className="items-center">
-      <Typography variant="h4" color="blue-gray" className="px-2 py-2 mb-0">
+    <Card color="transparent" className="items-center ">
+      <Typography variant="h4" color="blue-gray" className="px-2 py-2 mb-0 text-white">
         Add New Cheque
       </Typography>
       <Dialog

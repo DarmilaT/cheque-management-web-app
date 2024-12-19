@@ -23,31 +23,123 @@ function PendingChequeCard() {
   }, []);
 
   return (
-    <Card color="gray" variant="gradient" className="m-4">
-      <CardHeader
-        floated={false}
-        shadow={false}
-        color="transparent"
-        className="m-0 mb-8 rounded-none border-b border-white/10 pb-8 text-center"
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <Card
+        variant="gradient"
+        className="bg-blue-gray-800 w-full sm:w-64 m-2 h-40"
       >
-        <Typography
-          variant="h1"
-          color="white"
-          className="mt-4 mb-2 flex justify-center gap-1 text-5xl font-normal"
+        <CardHeader
+          floated={false}
+          shadow={false}
+          color="transparent"
+          className="m-0 mb-6 rounded-none pb-6 text-center"
         >
-          Total Amount of Pending Cheques
-        </Typography>
-      </CardHeader>
-      <CardBody className="p-0">
-        <Typography
-          variant="h1"
-          color="white"
-          className="mt-2 mb-4 flex justify-center gap-1 text-5xl font-normal"
+          <Typography
+            variant="h6"
+            color="white"
+            className="mt-4 text-xl sm:text-2xl font-semibold"
+          >
+            Pending Cheques
+          </Typography>
+        </CardHeader>
+        <CardBody className="p-0 text-center">
+          <Typography
+            variant="h6"
+            color="white"
+            className="mb-4 text-3xl sm:text-4xl font-bold"
+          >
+            {amount}
+          </Typography>
+        </CardBody>
+      </Card>
+
+      <Card
+        variant="gradient"
+        className="bg-blue-gray-800 w-full sm:w-64 m-2 h-40"
+      >
+        <CardHeader
+          floated={false}
+          shadow={false}
+          color="transparent"
+          className="m-0 mb-6 rounded-none pb-6 text-center"
         >
-          {amount}
-        </Typography>
-      </CardBody>
-    </Card>
+          <Typography
+            variant="h6"
+            color="white"
+            className="mt-4 text-xl sm:text-2xl font-semibold"
+          >
+            Pending Cheques
+          </Typography>
+        </CardHeader>
+        <CardBody className="p-0 text-center">
+          <Typography
+            variant="h6"
+            color="white"
+            className="mb-4 text-3xl sm:text-4xl font-bold"
+          >
+            {amount}
+          </Typography>
+        </CardBody>
+      </Card>
+
+      <Card
+        variant="gradient"
+        className="bg-blue-gray-800 w-full sm:w-64 m-2 h-40"
+      >
+        <CardHeader
+          floated={false}
+          shadow={false}
+          color="transparent"
+          className="m-0 mb-6 rounded-none pb-6 text-center"
+        >
+          <Typography
+            variant="h6"
+            color="white"
+            className="mt-4 text-xl sm:text-2xl font-semibold"
+          >
+            Pending Cheques
+          </Typography>
+        </CardHeader>
+        <CardBody className="p-0 text-center">
+          <Typography
+            variant="h6"
+            color="white"
+            className="mb-4 text-3xl sm:text-4xl font-bold"
+          >
+            {amount}
+          </Typography>
+        </CardBody>
+      </Card>
+
+      <Card
+        variant="gradient"
+        className="bg-blue-gray-800 w-full sm:w-64 m-2 h-40"
+      >
+        <CardHeader
+          floated={false}
+          shadow={false}
+          color="transparent"
+          className="m-0 mb-6 rounded-none pb-6 text-center"
+        >
+          <Typography
+            variant="h6"
+            color="white"
+            className="mt-4 text-xl sm:text-2xl font-semibold"
+          >
+            Pending Cheques
+          </Typography>
+        </CardHeader>
+        <CardBody className="p-0 text-center">
+          <Typography
+            variant="h6"
+            color="white"
+            className="mb-4 text-3xl sm:text-4xl font-bold"
+          >
+            {amount}
+          </Typography>
+        </CardBody>
+      </Card>
+    </div>
   );
 }
 

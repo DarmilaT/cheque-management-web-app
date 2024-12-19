@@ -4,7 +4,7 @@ import WeekCheques from "../components/WeekCheques";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-blue-gray-900">
       <PendingChequeCard />
       <WeekCheques />
     </div>
