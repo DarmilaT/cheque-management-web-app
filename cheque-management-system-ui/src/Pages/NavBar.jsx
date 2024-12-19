@@ -5,9 +5,9 @@ function NavBar() {
   return (
     <Navbar
       variant="gradient"
-      color="blue-gray"
+      // color="blue-gray"
       fullWidth
-      className="from-cyan-900 to-cyan-700 rounded-none"
+      className="bg-gradient-to-r from-indigo-900 to-gray-900 rounded-none"
     >
       <div className="flex flex-wrap items-center justify-between gap-y-4 text-white">
         <Typography
@@ -24,7 +24,7 @@ function NavBar() {
               variant="small"
               className="p-1 font-medium font"
             >
-              <MenuItem className="flex items-center gap-2 bg-cyan-600 hover:bg-cyan-300">
+              <MenuItem className="flex items-center gap-2 hover:bg-indigo-400 font-bold">
                 <span className="text-white"> Home </span>
               </MenuItem>
             </Typography>
@@ -34,7 +34,7 @@ function NavBar() {
               variant="small"
               className="p-1 font-medium font"
             >
-              <MenuItem className="flex items-center gap-2 bg-cyan-600 hover:bg-cyan-300">
+              <MenuItem className="flex items-center gap-2 hover:bg-indigo-400 font-bold">
                 <span className="text-white"> Add Cheque </span>
               </MenuItem>
             </Typography>
@@ -44,7 +44,7 @@ function NavBar() {
               variant="small"
               className="p-1 font-medium font"
             >
-              <MenuItem className="flex items-center gap-2 bg-cyan-600 hover:bg-cyan-300">
+              <MenuItem className="flex items-center gap-2 hover:bg-indigo-400 font-bold">
                 <span className="text-white"> Cheque List </span>
               </MenuItem>
             </Typography>
